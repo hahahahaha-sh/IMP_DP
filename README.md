@@ -8,3 +8,5 @@ ks.thy是对KS验证脚本
 lcs.thy是对LCS验证脚本
 
 Monad_Memo_DP是S.Wimmer实现的动态规划类算法Isabelle/HOL函数式建模与验证
+
+opt_bst是非线性数据结构（树）部分新增最优二叉搜索树问题的详细设计过程
