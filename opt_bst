@@ -14,13 +14,13 @@ function min_wpl_nat :: "nat ⇒ nat ⇒ (nat list list) ⇒ nat" where
 by auto
 termination 
   by (relation "measure (λ(i, j, W). j - i+1)") auto
-    根据2.1节动态规划类算法程序规约(前置条件P:length m ≥1;后置条件Q:x=length l ∧ m!u!v=),
+    根据2.1节动态规划类算法程序规约(前置条件P:length m ≥1;后置条件Q:x=length l ∧ m!u!v=G u v λ（λ上面加横线）),
 可以得出最优二叉搜索树问题的程序规约,在该问题中r表示遍历m的外循环变量,
 即x为r;依据其算法的遍历方式最终结束跳出循环时r的取值为length m[1],即l=m[1];
 u和v分别表示最后目标问题的阶段和状态,u=1,v = length (m[1])-1.
     综上所述,最优二叉搜索树的程序规约为:
     前置条件P:length m_bst ≥1
-    后置条件Q:r=length (m_bst[1]) ∧ m_bst!u!v=min_wpl u v λ（λ上面加横线）
+    后置条件Q:r=length (m_bst[1]) ∧ m_bst!u!v=min_wpl_nat u v W
 
 b．递推关系式 
     依据文中2.2节动态规划类算法递推关系式的归纳,可得最优二叉搜索树的递推关系式归纳步骤如下:
